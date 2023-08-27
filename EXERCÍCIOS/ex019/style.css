@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial;
+}
+
+p {
+    text-indent:  20pt;
+    text-align: justify;
+}
+
+.esq {
+    text-align: left;
+}
+
+.meio {
+    text-align: center;
+}
+
+.especial {
+    background-color: rgba(242, 255, 0, 0.468);
+}
