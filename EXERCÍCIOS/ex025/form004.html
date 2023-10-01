@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        html, body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            font-weight: bold;
+            width: 200px;
+        }
+
+        form fieldset {
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: red;
+            box-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-shadow: 0.5px 0.5px rgba(85, 84, 84, 0.5);
+        }
+
+        form fieldset > legend {
+            background-color: white;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+
+        form input {
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: inset 1px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        form input:hover {
+            background-color: rgb(231, 231, 231);
+        }
+
+        form input.button {
+            border-radius: 10px;
+            margin-left: 5px;
+            background-color: rgba(211, 211, 211, 0.5);
+            font-weight: bold;
+            padding: 5px;
+            box-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        form input.button:hover {
+            background-color: lightgray;
+            box-shadow: inset 2px 2px black;  
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <div id="formul">
+        <form action="cadastro.php" method="get" autocomplete="on">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <p>
+                    <label for="inome">Nome</label>
+                    <input type="text" name="nome" id="inome" autocomplete="name" required placeholder="Nome Completo*">
+                </p>
+                <p>
+                    <label for="iemail">E-mail</label>
+                    <input type="email" name="email" id="iemail" autocomplete="email" required placeholder="Ex: nome@email.com">
+                </p>
+                <p>
+                    <label for="itel">Telefone</label>
+                    <input type="tel" name="tel" id="itel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx)xxxx-xxxx" autocomplete="tel" required>
+                </p>
+            </fieldset>
+            <p>
+                <input class="button" type="submit" value="Enviar">
+                <input class="button" type="reset" value="Limpar">
+            </p>
+        </form>
+    </div>
+</body>
+</html>
