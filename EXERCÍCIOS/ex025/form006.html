@@ -10,7 +10,8 @@
         }
 
         form {
-            width: 400px;
+            margin: auto;
+            width: 410px;
         }
 
         form,h1 {
@@ -37,6 +38,11 @@
 
         input#ilevel{ 
             margin-bottom: 25px;
+        }
+
+        output#ilvl {
+            font-weight: bold;
+            color: #18206F;
         }
         
         input#iarchive {
@@ -69,12 +75,13 @@
                 <input type="color" name="cor" id="icor" value="#18206F">
             </p>
             <p>
-                <label for="ilevel">Nível de satisfação (range): </label>
-                <input type="range" name="level" id="ilevel" value="50" >
+                <label for="ilevel">Nível de satisfação (1 a 10): </label>
+                <input type="range" name="level" id="ilevel" value="5" min="0" max="10" oninput="ilvl.value = Number(ilevel.value)">
+                <output name="lvl" id="ilvl">5</output>
             </p>
             <p>
                 <label for="iarchive">File: </label>
-                <input type="file" name="archive" id="iarchive">
+                <input type="file" name="archive" id="iarchive" required>
             </p>
         
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outputs em Range</title>
+</head>
+<body>
+    <h1>Range + Output</h1>
+    <form action="cadastro.php" method="get">
+        <p>
+            <label for="irange">Valor: </label>
+            <input type="range" name="range" id="irange" value="5" min="0" max="10" oninput="ivalor.value = Number(irange.value)">
+            <output name="valor" id="ivalor">5</output>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
